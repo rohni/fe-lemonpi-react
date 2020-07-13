@@ -51,15 +51,13 @@ function App() {
   const loading = <div>Loading...</div>;
 
   return (
-    <div>
-      {advertisers.loading || stats.loading ? (
-        loading
-      ) : advertisers.error || stats.error ? (
-        error
-      ) : (
-        <AdvertiserList advertisers={advertisers.data} stats={stats.data} />
-      )}
-    </div>
+    <Table
+      title="Overview of Advertisers"
+      error={advertisers.error}
+      loading={advertisers.loading}
+      dataList={displayData}
+      displayColumns={displayColumns}
+    />
   );
 }
 
