@@ -10,7 +10,7 @@ export default function TableHeader({ columns, sortDirection, sortColumn, sortHa
           const sortClass = sortColumn === id ? sortDisplay[sortDirection] : 'sort';
           const fullClasses = [classes, sortClass].join(' ');
           return (
-            <th className={fullClasses} onClick={sortHandler(id)}>
+            <th key={`headerCell-${id}`} className={fullClasses} onClick={sortHandler(id)}>
               {display}
             </th>
           );
