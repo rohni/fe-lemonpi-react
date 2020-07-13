@@ -74,7 +74,6 @@ function App() {
     });
 
   const sortData = (data) => {
-    console.log('calling sortData', data, 'sortDirection', sortDirection, 'sortColumn', sortColumn);
     if (sortDirection === 0 || !sortColumn) {
       return data;
     }
