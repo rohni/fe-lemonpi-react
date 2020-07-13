@@ -7,16 +7,13 @@ Not as far as I would like, but there is something.
   will update once stats are in
 - styling approximating that in the pdf.  I had to guess on the exact colours
   (more comments below)
-
-Still working on:
-
 - Sorting (see below)
 
 TODO:
 
 - Testing all the things
 
-And once the sorting and routing (persistent sorting) is done, I'm going to see
+And once the routing (persistent sorting) is done, I'm going to see
 what I come up with using clojurescript. :-)
 
 ## Styling
@@ -32,14 +29,6 @@ easy.
 
 I ran out of time.  Normally, I would test all the data munging, and components
 where needed. i.e. loading state, error state for the table etc.
-
-
-## Still working on sorting
-
-I have the arrows and styles and the headers are not jumping around too much
-(well, actually yes, too much, but it is better than it was).
-
-Currently what is done is implemented on the `feature/sorting` branch.
 
 ## Available Scripts
 
