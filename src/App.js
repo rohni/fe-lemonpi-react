@@ -17,6 +17,8 @@ function App() {
   const [displayData, setDisplayData] = useState(advertisers.data);
 
   useEffect(() => {
+    // allow displaying advertiser data even if stats are not in, and ensure
+    // that the display is updated when the stats arrive
     setDisplayData(
       advertisers.data.map((row) => {
         const adStats = stats.data.find((st) => st.advertiserId === row.id);
@@ -29,7 +31,13 @@ function App() {
     );
   }, [advertisers, stats]);
 
-  const displayColumns = ['Name', 'Date Created', '# Campaigns', 'Impressions', 'Clicks'];
+  const columns = [
+    { display: 'Name', classes: '' },
+    { display: 'Date Created', classes: 'date' },
+    { display: '# Campaigns', classes: 'number' },
+    { display: 'Impressions', classes: 'number' },
+    { display: 'Clicks', classes: 'number' },
+  ];
 
   return (
     <Table
@@ -37,7 +45,7 @@ function App() {
       error={advertisers.error}
       loading={advertisers.loading}
       dataList={displayData}
-      displayColumns={displayColumns}
+      columns={columns}
     />
   );
 }
