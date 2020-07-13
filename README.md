@@ -7,7 +7,7 @@ Not as far as I would like, but there is something.
   will update once stats are in
 - styling approximating that in the pdf.  I had to guess on the exact colours
   (more comments below)
-- Sorting (see below)
+- Sorting
 
 TODO:
 
