@@ -8,11 +8,26 @@ const advertisersStatsUrl =
   'https://5b87a97d35589600143c1424.mockapi.io/api/v1/advertiser-statistics';
 
 function App() {
+  // fetch and set data from api requests
   const [advertisers, setAdvertisers] = useState({ data: [], error: false, loading: true });
   const [stats, setStats] = useState({ data: [], error: false, loading: true });
 
   useFetch(advertisers, setAdvertisers, advertisersUrl);
   useFetch(stats, setStats, advertisersStatsUrl);
+
+  // sorting stuff
+  const [sortColumn, setSortColumn] = useState(null);
+  const [sortDirection, setSortDirection] = useState(0);
+
+  const sortHandler = (id) => (event) => {
+    if (sortColumn !== id) {
+      // new column was clicked
+      setSortColumn(id);
+      setSortDirection(1);
+    } else {
+      setSortDirection((prev) => (prev + 1) % 3);
+    }
+  };
 
   const [displayData, setDisplayData] = useState(advertisers.data);
 
@@ -46,6 +61,9 @@ function App() {
       loading={advertisers.loading}
       dataList={displayData}
       columns={columns}
+      sortHandler={sortHandler}
+      sortDirection={sortDirection}
+      sortColumn={sortColumn}
     />
   );
 }
