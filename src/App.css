@@ -54,3 +54,15 @@ body {
 .date {
   text-align: center;
 }
+
+.sort-up:after {
+  content: '⏶';
+  margin-left: 0.5rem;
+  color: var(--primary-border);
+}
+
+.sort-down:after {
+  content: '⏷';
+  margin-left: 0.5rem;
+  color: var(--primary-border);
+}

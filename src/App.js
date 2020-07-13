@@ -32,11 +32,11 @@ function App() {
   }, [advertisers, stats]);
 
   const columns = [
-    { display: 'Name', classes: '' },
-    { display: 'Date Created', classes: 'date' },
-    { display: '# Campaigns', classes: 'number' },
-    { display: 'Impressions', classes: 'number' },
-    { display: 'Clicks', classes: 'number' },
+    { id: 1, display: 'Name', classes: '' },
+    { id: 2, display: 'Date Created', classes: 'date' },
+    { id: 3, display: '# Campaigns', classes: 'number' },
+    { id: 4, display: 'Impressions', classes: 'number' },
+    { id: 5, display: 'Clicks', classes: 'number' },
   ];
 
   return (
