@@ -1,4 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Lemon Pi FE Test
+
+Not as far as I would like, but there is something.
+
+- fetching data from apis
+- allowing displaying of advertisers even if the stats are not yet in, and view
+  will update once stats are in
+- styling approximating that in the pdf.  I had to guess on the exact colours
+  (more comments below)
+
+Still working on:
+
+- Sorting (see below)
+
+TODO:
+
+- Testing all the things
+
+And once the sorting and routing (persistent sorting) is done, I'm going to see
+what I come up with using clojurescript. :-)
+
+## Styling
+
+Currently styling is being done with a global style sheet.  I would normally
+break this down and attach it to components using css modules.  It needs
+cleaning up, and tightening up.
+
+The colours are defined globally, as variables so adding theming would be very
+easy.
+
+## Testing (lack of)
+
+I ran out of time.  Normally, I would test all the data munging, and components
+where needed. i.e. loading state, error state for the table etc.
+
+
+## Still working on sorting
+
+I have the arrows and styles and the headers are not jumping around too much
+(well, actually yes, too much, but it is better than it was).
+
+Currently what is done is implemented on the `feature/sorting` branch.
 
 ## Available Scripts
 
@@ -13,6 +54,12 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### `yarn test`
+
+Currently on the TODO.  Got bogged down with getting things to initially work,
+and wondering how to make it work.
+- data munging needs tests
+- various dumb components need testing
+- integration tests needed to ensure all the connections are working
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
